@@ -44,3 +44,13 @@
 //         ...
 //     }
 // ]
+
+
+
+
+/******************* JSON API sample ************/
+
+    // web site :- randomuserme 
+    // formatting the API
+    
+    // website :- JSONFormatting 
