@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chai aur code </title>
+</head>
+<body style="background-color: #212121; color: #fff;">
+    
+</body>
+<script>
+
+    /******** Create a div element by js ******************************/
+    const div = document.createElement('div')
+
+    /******** Set the class name to div***********/
+    console.log(div);
+    div.className = "main"
+    /************** create a id of div*****************/
+    div.id = Math.round(Math.random() * 10 + 1)
+
+    /******************Set the atrribute for the  elemenet such as  title***********************/
+    div.setAttribute("title", "generated title")
+
+    /******** Give the Css properties *************************/
+    div.style.backgroundColor = "green"
+    div.style.padding = "12px"
+
+
+    /*************first way to add the text into the element*************************/
+    // div.innerText = "Chai aur code"
+
+    /***************second or optimizied way to add the text into the element****************/
+
+    const addText = document.createTextNode("Chai aur code")
+
+    /*****************addding the created textr into the element**************/
+    div.appendChild(addText)
+
+    /***************add the element into the document ***********************/
+    document.body.appendChild(div)
+</script>
+</html>
