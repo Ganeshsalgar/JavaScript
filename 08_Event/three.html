@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document of setInterval</title>
+    <style>
+        body{
+            background-color: black;
+            color: white;
+            text-align: center;
+        }
+        #Start{
+            background-color: rgb(172, 231, 132);
+            padding: 12px 30px;
+            border-color: rgba(75, 74, 74, 0.397);
+            border-radius: 7px;
+            
+        }
+        #Start:hover{
+            background-color: rgb(85, 99, 70);
+            padding: 12px 30px;
+            border-color: rgba(75, 74, 74, 0.397);
+            border-radius: 7px;
+            
+        }
+        #Stop{
+            background-color: rgb(255, 109, 109);
+            padding: 12px 30px;
+            border-color: rgba(75, 74, 74, 0.397);
+            border-radius: 7px;
+        }  
+        #Stop:hover{
+            background-color: rgb(95, 64, 64);
+            padding: 12px 30px;
+            border-color: rgba(75, 74, 74, 0.397);
+            border-radius: 7px;
+            
+        }
+        
+    </style>
+
+</head>
+<body>
+    <h1>Chai aur Code</h1>
+    <h2>Start Printing My Name </h2>
+
+    <button id="Start" class="abc"> Start</button>
+    <button id="Stop" class="abc"> Stop</button>
+
+    <div id="results"></div>
+</body>
+<script>
+    // const sayDate = function(str){
+    //     console.log(str, Date.now());
+    // }
+    // /****** set Interval **********************/
+    // const intervalId = setInterval(sayDate, 1000, "hi")
+    
+    // /***************** clear Interval ************************/
+    // clearInterval(intervalId)
+    
+    const start = document.querySelector('#Start')
+    const stop = document.querySelector('#Stop')
+    const result = document.querySelector('#results');
+    const call = function intervalId () {
+                console.log("Ganesh");
+                result.innerHTML = "Ganesh"
+        }
+    
+    let intervalId;
+    let name;
+    start.addEventListener('click', function(){
+        intervalId = setInterval(call , 100);
+      
+
+    });
+    
+    stop.addEventListener('click',function(){
+        clearInterval(intervalId);
+    })
+
+
+    
+    
+   
+</script>
+</html>
