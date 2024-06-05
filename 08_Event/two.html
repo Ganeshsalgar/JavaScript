@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document of the setTimeOut</title>
+</head>
+<body>
+        <h1>Chai aur Code</h1>
+        <button id="Stop">Stop</button>
+</body>
+<script>
+    /**********SetTimeout ********************************/
+    const myName = function(){
+        console.log("Ganesh")
+    }
+    
+    setTimeout(myName , 2000);
+    /********** change dom using setInterval*******************/
+
+    const change = function(){
+        document.querySelector('h1').innerHTML = "Ganesh Salgar"
+    }
+
+    
+    const ChangeME = setTimeout(change , 2000)
+
+    /********* Stop the Setimeout method **********************/
+    document.querySelector('#Stop').addEventListener('click' , function(){
+        clearTimeout(ChangeME)
+        console.log("STOPED");
+    })
+
+</script>
+</html>
